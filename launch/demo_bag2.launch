@@ -1,28 +1,7 @@
 <launch>
   <arg name="rate"            default="1.0"/>
   <arg name="bag_file"        default="$(find turtlebot3_slam_3d)/rtab_bag.bag"/>
-  <param name="/use_sim_time" value="true"/>
-
-  <!--<include file="$(find turtlebot3_slam_3d)/launch/play_bag.launch">
-    <arg name="bag_file" value="$(arg bag_file)"/>
-    <arg name="rate" value="$(arg rate)"/>
-    <arg name="delay" value="30.0"/>
-  </include>-->
-
-  <!-- Gazebo -->
-  <!--<include file="$(find open_manipulator_with_tb3_gazebo)/launch/open_manipulator_with_tb3_rooms3.launch">
-  </include>
-  
-  <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher">
-      <rosparam param="source_list">["/joint_states"]</rosparam>
-  </node>
-  <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher"/>-->
-
-  <!-- RTABMAP -->
-  <!--<include file="$(find turtlebot3_slam_3d)/launch/rtabmap.launch">
-    <arg name="rate" value="$(arg rate)"/>
-    <arg name="rviz" value="false"/>
-  </include>-->
+  <param name="/use_sim_time" value="true"/>  
 
   <!-- DARKNET -->
   <include file="$(find turtlebot3_slam_3d)/launch/darknet.launch">
